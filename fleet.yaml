@@ -1,3 +1,4 @@
+# fleet.yaml at the repo root
 defaultNamespace: test-ns
 
 releases:
