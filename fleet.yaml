@@ -1,35 +1,8 @@
-defaultNamespace: otel-collector   # or any namespace you want
+defaultNamespace: test-ns
 
 releases:
-  - name: opentelemetry-collector
+  - name: test-helm-release
     chart:
-      repo: "https://open-telemetry.github.io/opentelemetry-helm-charts"
-      name: "opentelemetry-collector"
-      version: "0.53.0"  # Pin whichever version you prefer
-    values:
-      # Choose the deployment mode: "deployment", "daemonset", or "statefulset"
-      mode: deployment
-
-      # Provide your collector configuration as needed:
-      config:
-        receivers:
-          otlp:
-            protocols:
-              grpc: {}
-              http: {}
-        exporters:
-          logging:
-            logLevel: debug
-        service:
-          pipelines:
-            traces:
-              receivers: [otlp]
-              exporters: [logging]
-
-      # Optionally override resources, replica counts, etc.
-      # Example for 2 replicas:
-      replicaCount: 2
-
-      # Set service type if you want external access, for example:
-      service:
-        type: ClusterIP
+      repo: https://charts.bitnami.com/bitnami
+      name: nginx
+      version: 13.2.0
