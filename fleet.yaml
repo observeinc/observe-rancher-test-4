@@ -2,8 +2,8 @@
 defaultNamespace: test-ns
 
 helm:
-  - name: test-helm-release
-    chart:
-      repo: https://charts.bitnami.com/bitnami
-      name: nginx
-      version: 13.2.0
+  chart: nginx
+  repo: https://charts.bitnami.com/bitnami
+  releasename: nginx
+  version: 13.2.0
+  namespace: test-ns
