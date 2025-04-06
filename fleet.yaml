@@ -1,7 +1,7 @@
 # fleet.yaml at the repo root
 defaultNamespace: test-ns
 
-releases:
+helm:
   - name: test-helm-release
     chart:
       repo: https://charts.bitnami.com/bitnami
